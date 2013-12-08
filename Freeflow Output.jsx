@@ -25,6 +25,7 @@ if (BridgeTalk.appName == "photoshop")
 
         if(prefixName === null || typeof prefixName === 'undefined') {
             alert('Prefix name was undefined');
+            exit();
         }
         
         // create output folder if it does not exist        
@@ -63,7 +64,7 @@ if (BridgeTalk.appName == "photoshop")
                     }
                 
                 document.exportDocument(newFile, ExportType.SAVEFORWEB, exportOptions);
-                document.close(SaveOptions.DONOTSAVECHANGES);
+                //document.close(SaveOptions.DONOTSAVECHANGES);
              }
              alert("Complete!");
         } catch(e) {
